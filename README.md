@@ -2,6 +2,8 @@
 
 Sitio web de la academia de ballet **Bonnie Ballet**, dirigida por Bonnie. Desarrollado como una página estática (HTML/CSS) con foco en presentar el estudio, las clases que ofrece y la comunidad.
 
+🌐 **Sitio en vivo:** https://nicsorth.github.io/bonnie-ballet/
+
 ## Estructura del proyecto
 
 ```
