@@ -1092,43 +1092,42 @@
       font-size: 0.95rem;
       color: var(--c-primary);
     }
-    .newsletter__form-wrap .eyebrow { color: var(--c-primary-light); }
-    .newsletter__lead {
-      color: rgba(255,255,255,0.78);
-      margin-bottom: 2rem;
-      font-size: 1.05rem;
-      line-height: 1.75;
+    .newsletter__editions .eyebrow { color: var(--c-primary-light); }
+    .newsletter__editions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 1.5rem;
     }
-    .newsletter__form {
+    .newsletter__edition {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      align-items: stretch;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform var(--t), box-shadow var(--t), border-color var(--t);
     }
-    .newsletter__form input {
-      padding: 1rem 1.2rem;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: #fff;
-      font-family: var(--f-body);
-      font-size: 0.95rem;
-      border-radius: 2px;
-      transition: all var(--t);
-    }
-    .newsletter__form input::placeholder {
-      color: rgba(255,255,255,0.45);
-    }
-    .newsletter__form input:focus {
-      outline: none;
+    .newsletter__edition:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
       border-color: var(--c-primary-light);
-      background: rgba(255,255,255,0.12);
     }
-    .newsletter__form button {
-      align-self: flex-start;
+    .newsletter__edition img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 905 / 1280;
+      object-fit: cover;
     }
-    .newsletter__note {
-      margin-top: 1rem;
+    .newsletter__edition-caption {
+      padding: 0.75rem 1rem;
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+      text-align: center;
     }
 
     /* ============================================================
@@ -1714,7 +1713,6 @@
           <div class="course__body">
             <h3 class="course__title">Ballet Inicial</h3>
             <p class="course__desc">Para jóvenes y adultas sin experiencia previa. Trabajamos las bases técnicas, postura y musicalidad en un ambiente cálido y paciente.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1726,7 +1724,6 @@
           <div class="course__body">
             <h3 class="course__title">Ballet con Conocimientos</h3>
             <p class="course__desc">Para quienes ya tienen una base. Profundizamos la técnica clásica y la expresión artística, con un enfoque en la calidad del movimiento.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1738,7 +1735,6 @@
           <div class="course__body">
             <h3 class="course__title">Ballet Intermedio</h3>
             <p class="course__desc">Trabajo técnico de mayor exigencia en todo nivel. Para bailarinas que ya dominan el vocabulario básico y buscan crecer.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1750,7 +1746,6 @@
           <div class="course__body">
             <h3 class="course__title">Avanzado y Repertorio</h3>
             <p class="course__desc">Nivel de las alumnas más avanzadas, con profundización técnica y revisión de repertorio clásico.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1762,7 +1757,6 @@
           <div class="course__body">
             <h3 class="course__title">Puntas</h3>
             <p class="course__desc">Curso especializado para todas las bailarinas que quieran seguir perfeccionando su técnica de puntas y sentirse cada vez más seguras en su danza.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1774,7 +1768,6 @@
           <div class="course__body">
             <h3 class="course__title">Stretching</h3>
             <p class="course__desc">Elongación y cuidado del cuerpo para bailarinas. Complemento ideal a las clases de ballet o como práctica independiente.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1786,7 +1779,6 @@
           <div class="course__body">
             <h3 class="course__title">Repertorio Básico</h3>
             <p class="course__desc">Una introducción al repertorio clásico para todas. Aprende variaciones reconocibles del ballet en un entorno accesible y entusiasta.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1798,7 +1790,6 @@
           <div class="course__body">
             <h3 class="course__title">Pre-ballet Inicial</h3>
             <p class="course__desc">Para las más pequeñas. Una introducción lúdica y amorosa a la danza, donde el juego y la música son los grandes maestros.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1810,7 +1801,6 @@
           <div class="course__body">
             <h3 class="course__title">Pre-ballet Intermedio</h3>
             <p class="course__desc">Siguiente nivel del pre-ballet. Mayor conciencia corporal, musicalidad y los primeros vocabularios formales del ballet clásico.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1822,7 +1812,6 @@
           <div class="course__body">
             <h3 class="course__title">Ballet Pre-juvenil</h3>
             <p class="course__desc">La transición hacia el ballet formal. Rigor técnico con un enfoque apropiado a la edad: cuidado, paciencia y entusiasmo.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
@@ -1834,7 +1823,6 @@
           <div class="course__body">
             <h3 class="course__title">Ballet Infantil</h3>
             <p class="course__desc">Clases sabatinas para mini bailarinas que quieren practicar los fines de semana. Musicalidad, coordinación, primeros pasos en ballet.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
       </div>
@@ -1872,7 +1860,7 @@
             <span class="oc-card__tag">Viernes · 20:00</span>
             <h3 class="oc-card__title">Baile <em>Social</em></h3>
             <p class="oc-card__desc">Aprende a bailar en pareja para lucirte en cualquier celebración. Ven sola o acompañada — lo importante es pasarlo bien y aprender. Imparte <strong>Leo Fuentes</strong> (@leonardofuentes.dancerpro).</p>
-            <a href="https://wa.me/56224096351?text=Hola!%20Me%20interesa%20el%20curso%20de%20Baile%20Social." target="_blank" rel="noopener" class="btn btn--primary">Inscribirse por WhatsApp</a>
+            <a href="https://wa.me/56992324597?text=Hola!%20Me%20interesa%20el%20curso%20de%20Baile%20Social." target="_blank" rel="noopener" class="btn btn--primary">Inscribirse por WhatsApp</a>
           </div>
         </article>
 
@@ -1896,7 +1884,7 @@
             <span class="oc-card__tag">A convenir</span>
             <h3 class="oc-card__title">Waltz para <em>Novios</em></h3>
             <p class="oc-card__desc">Preparamos junto a ti y tu pareja la coreografía de su primer baile. Clases personalizadas, a tu ritmo, para que ese momento sea inolvidable.</p>
-            <a href="https://wa.me/56224096351?text=Hola!%20Quiero%20consultar%20por%20el%20Waltz%20para%20Novios." target="_blank" rel="noopener" class="btn btn--primary">Consultar por WhatsApp</a>
+            <a href="https://wa.me/56992324597?text=Hola!%20Quiero%20consultar%20por%20el%20Waltz%20para%20Novios." target="_blank" rel="noopener" class="btn btn--primary">Consultar por WhatsApp</a>
           </div>
         </article>
 
@@ -2102,6 +2090,9 @@
         <a href="#" class="gallery__item reveal">
           <img src="./imagenes/galeria/funcion-07-conjunto-dorado.jpg" alt="Conjunto de bailarinas con tutús dorados en función" />
         </a>
+        <a href="#" class="gallery__item reveal reveal--delay-1">
+          <img src="./imagenes/galeria/funcion-08-ronda-rosada.jpg" alt="Niñas en ronda con tutús rosados rodeando a la maestra" />
+        </a>
       </div>
 
       <p class="gallery__note">Envíanos tus fotos favoritas para incluirlas en nuestra galería</p>
@@ -2200,21 +2191,19 @@
           <div class="newsletter__preview-footer">Bonnie Corvalán · Estudio de Ballet</div>
         </div>
 
-        <div class="newsletter__form-wrap reveal reveal--delay-1">
+        <div class="newsletter__editions reveal reveal--delay-1">
           <span class="eyebrow">Boletín</span>
-          <h2 class="title title--light"><em>¡Qué Bonnie!</em><br>Nuestro boletín mensual</h2>
-          <p class="newsletter__lead">Cada mes compartimos novedades del estudio, eventos especiales, workshops y mucho más. ¡No te lo pierdas!</p>
-          <!--
-            TODO: Reemplazar este action con un endpoint real de Formspree, Mailchimp,
-            o un servicio similar para procesar las suscripciones. Por ahora se usa
-            mailto: como fallback simple.
-          -->
-          <form class="newsletter__form" action="mailto:contacto@bonniestudioballet.cl" method="post" enctype="text/plain" id="newsletterForm">
-            <input type="text" name="nombre" placeholder="Tu nombre" required />
-            <input type="email" name="email" placeholder="Tu correo electrónico" required />
-            <button type="submit" class="btn btn--primary">Suscribirme</button>
-          </form>
-          <p class="newsletter__note">Respetamos tu privacidad. Puedes darte de baja cuando quieras.</p>
+          <h2 class="title title--light">Últimas <em>ediciones</em></h2>
+          <div class="newsletter__editions-grid">
+            <a href="./imagenes/boletin/Boletin_abril.jpeg" target="_blank" rel="noopener" class="newsletter__edition">
+              <img src="./imagenes/boletin/Boletin_abril.jpeg" alt="Boletín ¡Qué Bonnie! edición de abril 2026" loading="lazy" />
+              <span class="newsletter__edition-caption">Abril 2026</span>
+            </a>
+            <a href="./imagenes/boletin/Boletin_marzo.jpeg" target="_blank" rel="noopener" class="newsletter__edition">
+              <img src="./imagenes/boletin/Boletin_marzo.jpeg" alt="Boletín ¡Qué Bonnie! edición de marzo 2026" loading="lazy" />
+              <span class="newsletter__edition-caption">Marzo 2026</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -2257,7 +2246,7 @@
               </span>
               <div>
                 <span class="contact__info-label">Teléfono</span>
-                <span class="contact__info-value"><a href="tel:+56224096351">+56 2 2409 6351</a></span>
+                <span class="contact__info-value"><a href="tel:+56992324597">+56 9 9232 4597</a></span>
               </div>
             </li>
             <li>
@@ -2363,7 +2352,7 @@
             <a href="https://www.youtube.com/@bonniecorvalanestudiodebal3585" target="_blank" rel="noopener" aria-label="YouTube">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22.5 6.5a2.7 2.7 0 0 0-1.9-1.9C18.9 4 12 4 12 4s-6.9 0-8.6.6A2.7 2.7 0 0 0 1.5 6.5C1 8.2 1 12 1 12s0 3.8.5 5.5a2.7 2.7 0 0 0 1.9 1.9c1.7.6 8.6.6 8.6.6s6.9 0 8.6-.6a2.7 2.7 0 0 0 1.9-1.9c.5-1.7.5-5.5.5-5.5s0-3.8-.5-5.5z"/><path d="M10 15.5l5-3.5-5-3.5v7z" fill="currentColor"/></svg>
             </a>
-            <a href="https://wa.me/56224096351" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="https://wa.me/56992324597" target="_blank" rel="noopener" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.5.1c-1.4-.7-2.3-1.3-3.2-2.9-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.1 3 2 3.1 4.9 4.4c1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M20 4A11 11 0 0 0 4 19l-1 4 4-1A11 11 0 1 0 20 4zm-8 18a9 9 0 0 1-4.6-1.3l-.3-.2-2.7.7.7-2.6-.2-.3A9 9 0 1 1 12 22z"/></svg>
             </a>
           </div>
@@ -2399,7 +2388,7 @@
           </p>
           <p class="footer__contact-item">
             <strong>Teléfono</strong>
-            <a href="tel:+56224096351">+56 2 2409 6351</a>
+            <a href="tel:+56992324597">+56 9 9232 4597</a>
           </p>
           <p class="footer__contact-item">
             <strong>Email</strong>
@@ -2418,7 +2407,7 @@
   <!-- ============================================================
        FLOATING BUTTONS
        ============================================================ -->
-  <a href="https://wa.me/56224096351?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20las%20clases%20de%20ballet."
+  <a href="https://wa.me/56992324597?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20las%20clases%20de%20ballet."
      target="_blank" rel="noopener"
      class="float-whatsapp"
      aria-label="Escríbenos por WhatsApp">
