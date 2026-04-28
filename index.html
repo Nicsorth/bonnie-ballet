@@ -545,6 +545,19 @@
       padding: 0.35rem 0.7rem;
       border-radius: 2px;
     }
+    .course--kids {
+      background: #FFF6F0;
+    }
+    .course--kids .course__tag {
+      background: var(--c-accent);
+    }
+    .course--kids .course__title,
+    .course--kids .course__link {
+      color: var(--c-accent-dark);
+    }
+    .course--kids .course__link:hover {
+      color: var(--c-accent);
+    }
     .course__body {
       padding: 1.75rem;
       flex: 1;
@@ -1634,7 +1647,7 @@
       <div class="hero__content">
         <div class="hero__deco" aria-hidden="true"></div>
         <span class="hero__eyebrow">Academia de Danza Clásica · Vitacura, Santiago</span>
-        <h1 class="hero__title">El arte de bailar<em>vive en ti</em></h1>
+        <h1 class="hero__title">Aquí…<em>todas podemos bailar</em></h1>
         <p class="hero__lead">Un espacio de encuentro para todas quienes sueñan con bailar, sin importar la edad ni el nivel.</p>
         <div class="hero__ctas">
           <a href="#clases" class="btn btn--primary">Ver todas las clases</a>
@@ -1689,14 +1702,14 @@
       <div class="section__head reveal">
         <span class="eyebrow">Nuestras Clases</span>
         <h2 class="title title--center">Libera tu alma <em>con la danza clásica</em></h2>
-        <p class="lead">Once cursos diseñados para acompañarte en cada etapa: desde los primeros pasos a los 3 años, hasta el repertorio clásico más exigente.</p>
+        <p class="lead">Once cursos diseñados para acompañarte en cada etapa: desde los primeros pasos, hasta el repertorio clásico más exigente.</p>
       </div>
 
       <div class="courses__grid">
         <article class="course reveal">
           <div class="course__media">
             <img src="./imagenes/estudio/adultas-inicial-barra.jpg" alt="Clase de ballet inicial para adultas en la barra" />
-            <span class="course__tag">Adultas · Inicial</span>
+            <span class="course__tag">Mar · Jue · Sáb 10:00 · Vie 19:00</span>
           </div>
           <div class="course__body">
             <h3 class="course__title">Ballet Inicial</h3>
@@ -1708,7 +1721,7 @@
         <article class="course reveal reveal--delay-1">
           <div class="course__media">
             <img src="./imagenes/estudio/adultas-trio-barra.jpg" alt="Trío de adultas trabajando técnica en la barra" />
-            <span class="course__tag">Adultas · Con Bases</span>
+            <span class="course__tag">Lun · Mié 10:00 · Mar · Jue 18:00 · Sáb 12:00</span>
           </div>
           <div class="course__body">
             <h3 class="course__title">Ballet con Conocimientos</h3>
@@ -1720,11 +1733,11 @@
         <article class="course reveal reveal--delay-2">
           <div class="course__media">
             <img src="./imagenes/estudio/ballet-intermedio-releve.jpg" alt="Bailarina intermedia en relevé en la barra" />
-            <span class="course__tag">Intermedio</span>
+            <span class="course__tag">Lun · Mié 19:30</span>
           </div>
           <div class="course__body">
             <h3 class="course__title">Ballet Intermedio</h3>
-            <p class="course__desc">Trabajo técnico exigente y aproximación al repertorio. Para bailarinas que ya dominan el vocabulario básico y buscan crecer.</p>
+            <p class="course__desc">Trabajo técnico de mayor exigencia en todo nivel. Para bailarinas que ya dominan el vocabulario básico y buscan crecer.</p>
             <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
@@ -1732,79 +1745,31 @@
         <article class="course reveal">
           <div class="course__media">
             <img src="./imagenes/estudio/avanzado-arabesque.jpg" alt="Bailarina avanzada en arabesque" />
-            <span class="course__tag">Avanzado</span>
+            <span class="course__tag">Mar · Jue 19:30</span>
           </div>
           <div class="course__body">
             <h3 class="course__title">Avanzado y Repertorio</h3>
-            <p class="course__desc">Nivel avanzado dedicado a las variaciones del repertorio clásico universal: Giselle, El Lago de los Cisnes, Don Quijote y más.</p>
+            <p class="course__desc">Nivel de las alumnas más avanzadas, con profundización técnica y revisión de repertorio clásico.</p>
             <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
         <article class="course reveal reveal--delay-1">
-          <div class="course__media">
-            <img src="./imagenes/estudio/pre-ballet-inicial-bebes.jpg" alt="Maestra acompañando a las más pequeñas en pre-ballet inicial" />
-            <span class="course__tag">Niñas · 3-5 años</span>
-          </div>
-          <div class="course__body">
-            <h3 class="course__title">Pre-ballet Inicial</h3>
-            <p class="course__desc">Para las más pequeñas. Una introducción lúdica y amorosa a la danza, donde el juego y la música son los grandes maestros.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
-          </div>
-        </article>
-
-        <article class="course reveal reveal--delay-2">
-          <div class="course__media">
-            <img src="./imagenes/estudio/pre-ballet-intermedio-cobra.jpg" alt="Niñas de pre-ballet intermedio en posición cobra" />
-            <span class="course__tag">Niñas · 6-7 años</span>
-          </div>
-          <div class="course__body">
-            <h3 class="course__title">Pre-ballet Intermedio</h3>
-            <p class="course__desc">Siguiente nivel del pre-ballet. Mayor conciencia corporal, musicalidad y los primeros vocabularios formales del ballet clásico.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
-          </div>
-        </article>
-
-        <article class="course reveal">
-          <div class="course__media">
-            <img src="./imagenes/estudio/pre-juvenil-clase.jpg" alt="Clase de ballet pre-juvenil con maestra" />
-            <span class="course__tag">Niñas · 8-11 años</span>
-          </div>
-          <div class="course__body">
-            <h3 class="course__title">Ballet Pre-juvenil</h3>
-            <p class="course__desc">La transición hacia el ballet formal. Rigor técnico con un enfoque apropiado a la edad: cuidado, paciencia y entusiasmo.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
-          </div>
-        </article>
-
-        <article class="course reveal reveal--delay-1">
-          <div class="course__media">
-            <img src="./imagenes/estudio/infantil-sabados-stretching.jpg" alt="Clase de ballet infantil de sábado con stretching guiado" />
-            <span class="course__tag">Sábados · Infantil</span>
-          </div>
-          <div class="course__body">
-            <h3 class="course__title">Ballet Infantil</h3>
-            <p class="course__desc">Clases especiales sabatinas para niñas, pensadas para quienes solo pueden asistir el fin de semana o complementan su práctica.</p>
-            <a href="#contacto" class="course__link">Ver más →</a>
-          </div>
-        </article>
-
-        <article class="course reveal reveal--delay-2">
           <div class="course__media">
             <img src="./imagenes/estudio/puntas-barra.jpg" alt="Bailarinas en zapatillas de punta trabajando en la barra" />
-            <span class="course__tag">Especialización</span>
+            <span class="course__tag">Lun · Mié 11:00 · Vie 18:00 · Sáb 13:00</span>
           </div>
           <div class="course__body">
             <h3 class="course__title">Puntas</h3>
-            <p class="course__desc">Curso especializado de trabajo en puntas. Requiere nivel previo y la guía de la maestra para incorporarse con seguridad.</p>
+            <p class="course__desc">Curso especializado para todas las bailarinas que quieran seguir perfeccionando su técnica de puntas y sentirse cada vez más seguras en su danza.</p>
             <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
 
-        <article class="course reveal">
+        <article class="course reveal reveal--delay-2">
           <div class="course__media">
             <img src="./imagenes/estudio/stretching-grupo.jpg" alt="Grupo de bailarinas en sesión de stretching" />
-            <span class="course__tag">Cuerpo · Bienestar</span>
+            <span class="course__tag">Mar · Jue 11:00</span>
           </div>
           <div class="course__body">
             <h3 class="course__title">Stretching</h3>
@@ -1813,14 +1778,62 @@
           </div>
         </article>
 
-        <article class="course reveal reveal--delay-1">
+        <article class="course reveal">
           <div class="course__media">
             <img src="./imagenes/estudio/repertorio-basico-puntas.jpg" alt="Bailarinas en puntas ensayando una variación del repertorio" />
-            <span class="course__tag">Viernes 17:00</span>
+            <span class="course__tag">Vie 17:00</span>
           </div>
           <div class="course__body">
             <h3 class="course__title">Repertorio Básico</h3>
             <p class="course__desc">Una introducción al repertorio clásico para todas. Aprende variaciones reconocibles del ballet en un entorno accesible y entusiasta.</p>
+            <a href="#contacto" class="course__link">Ver más →</a>
+          </div>
+        </article>
+
+        <article class="course course--kids reveal reveal--delay-1">
+          <div class="course__media">
+            <img src="./imagenes/estudio/pre-ballet-inicial-bebes.jpg" alt="Maestra acompañando a las más pequeñas en pre-ballet inicial" />
+            <span class="course__tag">Mar · Jue 16:00</span>
+          </div>
+          <div class="course__body">
+            <h3 class="course__title">Pre-ballet Inicial</h3>
+            <p class="course__desc">Para las más pequeñas. Una introducción lúdica y amorosa a la danza, donde el juego y la música son los grandes maestros.</p>
+            <a href="#contacto" class="course__link">Ver más →</a>
+          </div>
+        </article>
+
+        <article class="course course--kids reveal reveal--delay-2">
+          <div class="course__media">
+            <img src="./imagenes/estudio/pre-ballet-intermedio-cobra.jpg" alt="Niñas de pre-ballet intermedio en posición cobra" />
+            <span class="course__tag">Lun · Mié 16:45</span>
+          </div>
+          <div class="course__body">
+            <h3 class="course__title">Pre-ballet Intermedio</h3>
+            <p class="course__desc">Siguiente nivel del pre-ballet. Mayor conciencia corporal, musicalidad y los primeros vocabularios formales del ballet clásico.</p>
+            <a href="#contacto" class="course__link">Ver más →</a>
+          </div>
+        </article>
+
+        <article class="course course--kids reveal">
+          <div class="course__media">
+            <img src="./imagenes/estudio/pre-juvenil-clase.jpg" alt="Clase de ballet pre-juvenil con maestra" />
+            <span class="course__tag">Mar · Jue 17:00</span>
+          </div>
+          <div class="course__body">
+            <h3 class="course__title">Ballet Pre-juvenil</h3>
+            <p class="course__desc">La transición hacia el ballet formal. Rigor técnico con un enfoque apropiado a la edad: cuidado, paciencia y entusiasmo.</p>
+            <a href="#contacto" class="course__link">Ver más →</a>
+          </div>
+        </article>
+
+        <article class="course course--kids reveal reveal--delay-1">
+          <div class="course__media">
+            <img src="./imagenes/estudio/infantil-sabados-stretching.jpg" alt="Clase de ballet infantil de sábado con stretching guiado" />
+            <span class="course__tag">Sáb 11:00</span>
+          </div>
+          <div class="course__body">
+            <h3 class="course__title">Ballet Infantil</h3>
+            <p class="course__desc">Clases sabatinas para mini bailarinas que quieren practicar los fines de semana. Musicalidad, coordinación, primeros pasos en ballet.</p>
             <a href="#contacto" class="course__link">Ver más →</a>
           </div>
         </article>
@@ -2088,9 +2101,6 @@
         </a>
         <a href="#" class="gallery__item reveal">
           <img src="./imagenes/galeria/funcion-07-conjunto-dorado.jpg" alt="Conjunto de bailarinas con tutús dorados en función" />
-        </a>
-        <a href="#" class="gallery__item reveal reveal--delay-1">
-          <img src="./imagenes/galeria/comunidad-risas-jovenes.jpg" alt="Bailarinas jóvenes compartiendo entre risas" />
         </a>
       </div>
 
